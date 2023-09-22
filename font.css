@@ -1,0 +1,723 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(82, 86, 89);
+    font-family: 'Roboto', sans-serif;
+    cursor: default;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#select-page {
+    background-color: rgb(54, 55, 56);
+    border-top: 2.5px solid black;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 59px;
+    left: -300px;
+    z-index: 1;
+    overflow-y: scroll;
+}
+
+.menu-animation {
+    animation: anime 0.5s ease both;
+}
+
+@keyframes anime {
+    0% {
+        left: -300px;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+.menu-animation-retour {
+    animation: anime-retour 0.5s ease both;
+}
+
+@keyframes anime-retour {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -300px;
+    }
+}
+
+#select-page .container-selectpage-img {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#select-page .container-selectpage-img img{
+    width: 170px;
+    height: 240px;
+    margin-top: 40px;
+    opacity: 0.8;
+    transition: all 0.2s linear;
+}
+
+#select-page .container-selectpage-img img:hover {
+    opacity: 1;
+}
+
+#select-page .container-selectpage-img .last {
+    margin-bottom: 100px;
+}
+
+#select-page::-webkit-scrollbar {
+    width: 1px;
+    display: none;
+}
+
+#select-page::-webkit-scrollbar-thumb {
+    width: 1px;
+    background-color: rgb(207, 207, 207);
+}
+
+#select-page:hover::-webkit-scrollbar {
+    display: block;
+}
+
+.list-nav {
+    width: 100%;
+    height: 60px;
+    list-style-type: none;
+    background: rgb(54, 55, 56);
+    color: white;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 1px 5px rgb(54, 55, 56);
+    font-family: 'Roboto';
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.item-nav {
+    font-size: 15px;
+    margin: 0 20px;
+    opacity: 0.8;
+    transition: all 250ms linear;
+}
+
+.item-nav:hover {
+    opacity: 1;
+}
+
+.barre {
+    cursor: pointer;
+}
+
+.item-nav:nth-child(2) {
+    margin-right: auto;
+}
+
+.number {
+    background-color: black;
+}
+
+.min, .plus {
+   cursor: pointer;
+   font-weight: 800;
+}
+
+
+.firstLine{
+    background-color: white;
+    height: 2px;
+    width: 20px;
+    margin: 5px 0;
+}
+
+.secondLine {
+    background-color: white;
+    height: 2px;
+    width: 20px;
+    margin: 5px 0;
+}
+
+.mainPage {
+    background-color: white;
+    margin: 65px auto 20px;
+    width: 800px;
+    height: 1000px;
+    box-shadow: rgb(54, 55, 56) 0px 1px 10px 3px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.mainPage h1 {
+    text-align: center;
+    font-size: 110px;
+    text-transform: uppercase;
+    margin: 20px 0 -20px 0;
+}
+
+.mainPage h2 {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 55px;
+    white-space: nowrap;
+}
+
+.mainPage .container-img {
+    margin: 0 auto 0;
+}
+
+.mainPage .container-img img {
+    width: 730px;
+    height: 810px;
+    object-fit: cover;
+    object-position: 40% 50%;
+}
+
+.mainPage .style {
+    position: absolute;
+    bottom: 255px;
+    left: 55px;
+}
+
+.mainPage .style h4 {
+    color: rgb(253, 117, 183);
+    font-size: 23px;
+}
+
+.mainPage .style p {
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+    
+}
+
+.mainPage .portrait {
+    position: absolute;
+    bottom: 140px;
+    left: 55px;
+}
+
+.mainPage .portrait h4 {
+    font-size: 23px;
+    color: rgba(120, 188, 252, 1);
+}
+
+.mainPage .portrait p {
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+}
+
+.mainPage .info {
+    position: absolute;
+    bottom: 70px;
+    left: 55px;
+}
+
+.mainPage .info h4 {
+    font-size: 23px;
+    color: rgba(253, 151, 129, 1);
+}
+
+.mainPage .info p {
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+}
+
+.mainPage .annee {
+    position: absolute;
+    bottom: 360px;
+    right: 55px;
+    text-align: end;
+}
+
+.mainPage .annee h4 {
+    color: rgba(255, 169, 210, 1);
+    font-size: 50px;
+}
+
+.mainPage .annee p {
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
+}
+
+.mainPage h5 {
+    font-size: 12px;
+    text-align: end;
+    margin: 4px 35px 0 0;
+    text-transform: uppercase;
+}
+
+.page1, .page4 {
+    background-color: white;
+    margin: 0 auto 20px;
+    width: 800px;
+    height: 1000px;
+    box-shadow: rgb(54, 55, 56) 0px 1px 10px 3px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.page1 .entete, .page4 .entete {
+    text-align: center;
+    font-weight: 300;
+    font-size: 12px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.page1 .entete span, .page4 .entete span {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.page1 .container-img1-page1, .page4 .container-img1-page4 {
+    margin: 40px auto 0;
+}
+
+.page1 .container-img1-page1 img, .page4 .container-img1-page4 img {
+    width: 680px;
+    height: 325px;
+    object-fit: cover;
+    object-position: 1% 0%;
+}
+
+.page1 h6, .page4 h6 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.page1 h5, .page4 h5 {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 100;
+    margin-top: -15px;
+}
+
+.page1 .container-img2-page1, .page4 .container-img2-page4 {
+    margin: 40px auto 0;
+}
+
+.page1 .container-img2-page1 img, .page4 .container-img2-page4 img {
+    width: 680px;
+    height: 325px;
+    object-fit: cover;
+}
+
+.numero-page {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 11px;
+    text-decoration: underline;
+}
+
+.page2 .numero-page {
+    left: initial;
+    right: 10px;
+}
+
+.page2 {
+    background-color: white;
+    margin: 0 auto 20px;
+    width: 800px;
+    height: 1100px;
+    box-shadow: rgb(54, 55, 56) 0px 1px 10px 3px;
+    position: relative;
+}
+
+.page2 .container-img-page2 img {
+    width: 800px;
+    height: 1100px;
+    object-fit:cover;
+}
+
+.page3, .page6 {
+    background-color: white;
+    margin: 0 auto 20px;
+    width: 800px;
+    height: 2000px;
+    box-shadow: rgb(54, 55, 56) 0px 1px 10px 3px;
+    position: relative; 
+}
+
+.page3 .container-img-page3 img, .page6 .container-img-page6 img {
+    width: 800px;
+    height: 900px;
+    object-fit: cover;
+}
+
+.page3 .entete, .page6 .entete, .page7 .entete, .page9 .entete {
+    text-align: center;
+    font-weight: 300;
+    font-size: 12px;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.page3 .entete span, .page6 .entete span, .page7 .entete span, .page9 .entete span {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.page3 .numero-page, .page6 .numero-page {
+    color: white;
+}
+
+.page3 .container-img1-2-page3, .page6 .container-img1-2-page6 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.page3 .container-img1-2-page3 img:nth-child(1), .page6 .container-img1-2-page6 img:nth-child(1) {
+    width: 395px;
+    height: 430px;
+    object-fit: cover;
+    filter: brightness(0.9);
+}
+
+.page3 .container-img1-2-page3 img:nth-child(2), .page6 .container-img1-2-page6 img:nth-child(2) {
+    width: 395px;
+    height: 430px;
+    object-fit: cover;
+}
+
+.page3 .container-img3-page3 img {
+    width: 800px;
+    height: 651px;
+    margin-top: 10px;
+    object-fit: cover;
+    object-position: 0% 37% ;
+}
+
+.page4 .numero-page, .page6 .numero-page, .page8 .numero-page {
+    left: initial;
+    right: 15px;
+}
+
+.page5 {
+    background-color: white;
+    margin: 0 auto 20px;
+    width: 800px;
+    height: 1200px;
+    box-shadow: rgb(54, 55, 56) 0px 1px 10px 3px;
+    position: relative;
+}
+
+.page5 .container-img-page5 img{
+    width: 800px;
+    height: 1200px;
+    object-fit:cover;
+}
+
+.page6 .container-img3-page6 img {
+    width: 800px;
+    height: 651px;
+    margin-top: 10px;
+    object-fit: cover;
+}
+
+.page7 {
+    background-color: white;
+    margin: 0 auto 20px;
+    width: 800px;
+    height: 1000px;
+    box-shadow: rgb(54, 55, 56) 0px 1px 10px 3px;
+    position: relative;
+}
+
+.page7 .container-img-page7 img {
+    width: 800px;
+    height: 1000px;
+    object-fit:cover;
+}
+
+.page7 .resume-portrait {
+    border: 8px solid white;
+    width: 260px;
+    position: absolute;
+    right: 25px;
+    bottom: 150px;
+    color: white;
+    padding: 25px;
+    font-size: 20px;
+    background-color: black;
+}
+
+.page7 .resume-portrait h6 {
+    margin: 1px 0 8px 0;
+    font-weight: 300;
+}
+
+.page8 {
+    background-color: white;
+    margin: 0 auto 20px;
+    width: 800px;
+    height: 1000px;
+    box-shadow: rgb(54, 55, 56) 0px 1px 10px 3px;
+    position: relative;
+}
+
+.page8 h5, .page8 h6 {
+    text-align: center;
+}
+
+.page8 h5 {
+    font-size: 45px;
+    padding-top: 100px;
+}
+
+.page8 h6 {
+    font-size: 30px;
+    font-weight: 300;
+    padding-top: 10px;
+}
+
+.page8 .portrait-txt {
+    padding: 110px;
+    text-align: justify;
+    font-size: 15px;
+}
+
+.page8 .letterine {
+    font-size: 150px;
+    float: left;
+    line-height: 80%;
+    text-decoration: underline;
+    margin: 0 10px 20px 0;
+}
+
+.page9 {
+    background-color: white;
+    margin: 0 auto 20px;
+    width: 800px;
+    height: 1000px;
+    box-shadow: rgb(54, 55, 56) 0px 1px 10px 3px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.page9 .container-img1-page9 {
+    margin: 80px auto 30px;
+}
+
+.page9 .container-img1-page9 img {
+   width: 550px;
+   height: 700px;
+   object-fit: cover;
+   object-position: 0% 100%;
+}
+
+.page9 h5 {
+    position: absolute;
+    left: 120px;
+    bottom: 205px;
+    color: white;
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+.page9 .container-reseau-global {
+    display: flex;
+    justify-content: center;
+}
+
+.page9 .container-reseau-global .container-reseau {
+    margin: 10px 40px;
+    text-align: center;
+    position: relative;
+}
+
+.page9 .container-reseau-global .container-reseau img {
+    width: 25px;
+}
+
+.page9 .container-reseau-global .container-reseau p {
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.page9 .sam {
+    position: absolute;
+    font-size: 12px;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.mainPage .style .svg-style {
+    position: absolute;
+    z-index: 0;
+    width: 190px;
+    height: 80px;
+    left: -20px;
+}
+
+.mainPage .style .ellipse-style, .mainPage .portrait .ellipse-portrait, .mainPage .info .ellipse-info {
+    fill: none;
+    stroke: rgb(54, 55, 56);
+    stroke-width: 4;
+    stroke-dashoffset: 900;
+    stroke-dasharray: 900;
+    transition: stroke-dashoffset 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.mainPage .style:hover .ellipse-style {
+    stroke-dashoffset: 0;
+}
+
+.mainPage .portrait:hover .ellipse-portrait {
+    stroke-dashoffset: 0;
+}
+
+.mainPage .info:hover .ellipse-info {
+    stroke-dashoffset: 0;
+}
+
+.mainPage .portrait .svg-portrait {
+    position: absolute;
+    z-index: 0;
+    width: 190px;
+    height: 130px;
+    left: -20px;
+}
+
+.mainPage .info .svg-info {
+    position: absolute;
+    z-index: 0;
+    width: 190px;
+    height: 80px;
+    left: -20px;
+}
+
+.page9 .svg-fb {
+    position: absolute;
+    left: -25px;
+    height: 65px;
+    width: 113px;
+}
+
+.page9 .svg-fb .ellipse-fb,
+.page9 .svg-insta .ellipse-insta,
+.page9 .svg-mail .ellipse-mail,
+.page9 .svg-rv .ellipse-rv {
+    fill: none;
+    stroke: rgb(54, 55, 56);
+    stroke-width: 2;
+    stroke-dashoffset: 900;
+    stroke-dasharray: 900;
+    transition: stroke-dashoffset 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.page9 .container-reseau:hover .ellipse-fb,
+.page9 .container-reseau:hover .ellipse-insta,
+.page9 .container-reseau:hover .ellipse-mail,
+.page9 .container-reseau:hover .ellipse-rv {
+    stroke-dashoffset: 0;
+}
+
+.page9 .svg-insta {
+    position: absolute;
+    left: -20px;
+    height: 65px;
+    width: 113px;
+}
+
+.page9 .svg-mail {
+    position: absolute;
+    left: -36px;
+    height: 65px;
+    width: 113px;
+}
+
+.page9 .svg-rv {
+    position: absolute;
+    left: -15px;
+    height: 65px;
+    width: 113px;
+}
+
+.page9 .svg-sam {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    height: 50px;
+    width: 150px;
+}
+
+.page9 .svg-sam .ellipse-sam {
+    fill: none;
+    stroke: rgb(54, 55, 56);
+    stroke-width: 2;
+    stroke-dashoffset: 900;
+    stroke-dasharray: 900;
+    transition: stroke-dashoffset 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.page9 .container-sam:hover .ellipse-sam {
+    stroke-dashoffset: 0;
+    z-index: 0;
+}
+
+@media screen and (max-width: 650px) {
+    
+    .item-nav {
+        font-size: 12px;
+    }
+    svg {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 540px) {
+    
+    nav {
+        display: none;
+    }
+    .mainPage {
+        margin: 25px auto 20px;
+    }
+
+}
+
+
+
+
+
+
+
+
